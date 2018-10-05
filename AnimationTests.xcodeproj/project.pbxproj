@@ -16,6 +16,8 @@
 		375D1A6620FD26EE00ED0311 /* AnimationTestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D1A6520FD26EE00ED0311 /* AnimationTestsTests.swift */; };
 		375D1A7120FD26EE00ED0311 /* AnimationTestsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D1A7020FD26EE00ED0311 /* AnimationTestsUITests.swift */; };
 		375D1A8420FD2A9D00ED0311 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D1A8320FD2A9D00ED0311 /* Constants.swift */; };
+		3777D3C12167905D00D1DFC6 /* DrawShapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3777D3C02167905D00D1DFC6 /* DrawShapesViewController.swift */; };
+		37F611D72163A1F6003F7335 /* DraggableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F611D62163A1F6003F7335 /* DraggableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		375D1A7020FD26EE00ED0311 /* AnimationTestsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTestsUITests.swift; sourceTree = "<group>"; };
 		375D1A7220FD26EE00ED0311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		375D1A8320FD2A9D00ED0311 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3777D3C02167905D00D1DFC6 /* DrawShapesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawShapesViewController.swift; sourceTree = "<group>"; };
+		37F611D62163A1F6003F7335 /* DraggableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				375D1A4F20FD26ED00ED0311 /* OptionsViewController.swift */,
+				37F611D62163A1F6003F7335 /* DraggableViewController.swift */,
+				3777D3C02167905D00D1DFC6 /* DrawShapesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -302,7 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37F611D72163A1F6003F7335 /* DraggableViewController.swift in Sources */,
 				375D1A5020FD26ED00ED0311 /* OptionsViewController.swift in Sources */,
+				3777D3C12167905D00D1DFC6 /* DrawShapesViewController.swift in Sources */,
 				375D1A5620FD26ED00ED0311 /* AnimationTests.xcdatamodeld in Sources */,
 				375D1A4E20FD26ED00ED0311 /* AppDelegate.swift in Sources */,
 				375D1A8420FD2A9D00ED0311 /* Constants.swift in Sources */,

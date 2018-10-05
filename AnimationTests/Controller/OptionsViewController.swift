@@ -20,6 +20,7 @@ class OptionsViewController: UIViewController {
 }
 
 extension OptionsViewController: UITableViewDataSource {
+    // MARK: - Layout setup
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerFrame = CGRect(x: Constants.zero, y: Constants.zero, width: tableView.frame.width, height: Constants.Sizes.optionsHeaderHeight)
         let headerView = UIView(frame: headerFrame)
@@ -47,17 +48,25 @@ extension OptionsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: Constants.Identifiers.optionsCell)
-        let labelFrame = CGRect(x: cell.frame.minX, y: cell.frame.midY - cell.frame.height/2, width: tableView.frame.width, height: Constants.Sizes.optionsCellHeight)
-        let label = UILabel(frame: labelFrame)
-        label.text = Constants.options[indexPath.row]
-        cell.addSubview(label)
+        cell.textLabel?.text = Constants.options[indexPath.row]
         return cell
     }
 }
 
 extension OptionsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        switch indexPath.row {
+        case 0:
+            let shapes = storyboard.instantiateViewController(withIdentifier: Constants.Identifiers.draggableView)
+            self.navigationController?.pushViewController(shapes, animated: true)
+        case 1:
+            let draggable = storyboard.instantiateViewController(withIdentifier: Constants.Identifiers.drawShapesView)
+            self.navigationController?.pushViewController(draggable, animated: true)
+        default:
+            print("well shiet")
+        }
     }
 }
 

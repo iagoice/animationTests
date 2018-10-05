@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct Constants {
-    static let options = ["Draw shapes"]
+    static let options = ["Draw shapes", "Draggable View"]
     
     static let zero: CGFloat = 0
     
@@ -25,6 +25,8 @@ struct Constants {
     
     struct Identifiers {
         static let optionsCell = "optionsCellIdentifier"
+        static let draggableView = "DraggableView"
+        static let drawShapesView = "DrawShapesView"
     }
     
 }
