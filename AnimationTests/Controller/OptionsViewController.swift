@@ -54,18 +54,21 @@ extension OptionsViewController: UITableViewDataSource {
 }
 
 extension OptionsViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        var viewController: UIViewController?
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         switch indexPath.row {
         case 0:
-            let shapes = storyboard.instantiateViewController(withIdentifier: Constants.Identifiers.draggableView)
-            self.navigationController?.pushViewController(shapes, animated: true)
+            viewController = storyboard.instantiateViewController(withIdentifier: Constants.Identifiers.draggableView)
         case 1:
-            let draggable = storyboard.instantiateViewController(withIdentifier: Constants.Identifiers.drawShapesView)
-            self.navigationController?.pushViewController(draggable, animated: true)
+            viewController = storyboard.instantiateViewController(withIdentifier: Constants.Identifiers.drawShapesView)
         default:
             print("well shiet")
+        }
+        if let controller = viewController {
+            self.navigationController?.pushViewController(controller, animated: true)
         }
     }
 }
